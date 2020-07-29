@@ -3,6 +3,7 @@
   font-size: 1.4rem;
   list-style-type: none;
   margin-top: 3.5rem;
+  overflow: hidden;
 
   @media only screen and (max-width: $bp-ipad-pro) {
     display: flex;
@@ -71,6 +72,7 @@
     display: flex;
     align-items: center;
     z-index: 2;
+    height: 100%;
 
     @media only screen and (max-width: $bp-medium) {
       justify-content: center;
@@ -79,6 +81,14 @@
     @media only screen and (max-width: $bp-small) {
       flex-direction: column;
       padding: 1.5rem .5rem;
+    }
+
+    span {
+     text-align: center;
+
+     @media only screen and (max-width: $bp-smallest) {
+      font-size: 1.2rem;
+    }
     }
   }
   &__icon {

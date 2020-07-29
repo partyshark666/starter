@@ -7,11 +7,11 @@
   //   //TESTING
   //   min-height: 50rem;
 
-  @media only screen and (max-width: $bp-ipad-proland) {
-    margin: 8rem auto;
-    max-width: 100%;
-    width: 100%;
-  }
+  // @media only screen and (max-width: $bp-ipad-proland) {
+  //   margin: 8rem auto;
+  //   max-width: 100%;
+  //   width: 100%;
+  // }
 
   @media only screen and (max-width: $bp-largest) {
     margin: 8rem auto;
@@ -68,6 +68,9 @@
   }
   @media only screen and (max-width: $bp-small) {
     flex-direction: column;
+  }
+  @media only screen and (max-width: $bp-smallest) {
+    padding: 2.5rem 0;
   }
 }
 

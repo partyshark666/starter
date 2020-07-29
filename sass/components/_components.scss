@@ -110,6 +110,9 @@
     left: 0;
     width: 100%;
     z-index: -1;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
 
     color: var(--color-primary);
     font-weight: 600;
@@ -216,7 +219,6 @@
 
 .gallery {
   display: flex;
-  overflow: hidden;
 
   &__photo {
     width: 100%;
@@ -234,7 +236,7 @@
 
   &__item {
     position: relative;
-
+    overflow: hidden;
     &-caption {
       position: absolute;
       bottom: 0;
@@ -242,7 +244,7 @@
       width: 100%;
       background-image: linear-gradient(
         to right bottom,
-        rgba(#eb2f64, 0.85),
+        rgba(#eb2f64, 0.05),
         rgba(#eb2f64, 0.85)
       );
       transform: translateY(100%);
@@ -257,7 +259,7 @@
       color: white;
       text-transform: uppercase;
       font-size: 1.9rem;
-      font-weight: 300;
+      font-weight: 400;
     }
   }
   &__item:hover &__item-caption {
@@ -276,6 +278,7 @@
   display: flex;
   align-items: center;
   border-bottom: var(--line);
+
   &__heading {
     font-size: 2.25rem;
     font-weight: 300;
@@ -287,12 +290,19 @@
       font-size: 1.8rem;
       padding: 1.25rem 2rem;
     }
+    @media only screen and (max-width: $bp-smallest) {
+      font-size: 1.6rem;
+      padding-left: 1rem;
+    }
   }
 
   &__stars {
     //  flex: 1;
     margin-right: auto;
     display: flex; //this is done to remove weird spacing on SVG elements
+    @media only screen and (max-width: $bp-smallest) {
+      flex: 0 1 auto;
+    }
   }
 
   &__icon-star,
@@ -300,6 +310,10 @@
     width: 1.75rem;
     height: 1.75rem;
     fill: var(--color-primary);
+    @media only screen and (max-width: $bp-smallest) {
+      width: 1.3rem;
+      height: 1.3rem;
+    }
   }
   &__location {
     font-size: 1.2rem;
@@ -339,7 +353,8 @@
       text-transform: uppercase;
 
       @media only screen and (max-width: $bp-small) {
-        font-size: 0.5rem;
+        font-size: 0.9rem;
+        text-align: center;
       }
     }
   }
@@ -358,6 +373,11 @@
   background-color: transparent;
   cursor: pointer;
   transition: all 0.2s;
+
+  @media only screen and (max-width: $bp-smallest) {
+    font-size: 1.1rem;
+    text-align: center;
+  }
 
   & span {
     margin-left: 3px;
